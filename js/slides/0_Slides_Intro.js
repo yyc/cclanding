@@ -53,10 +53,10 @@ SLIDES.push({
 
 		// TITLE TEXT
 		self.add({
-			id:"title", type:"TextBox",
-			x:130, y:80, width:700,
-			size:80, lineHeight:0.9, align:"center",
-			text_id:"title"
+			id:"logo", type:"ImageBox",
+			x:325, y:-50,
+			h: 300, w: 300,
+			src: "assets/CC-logo-white.png"
 		});
 		self.add({
 			id:"subtitle", type:"TextBox",
