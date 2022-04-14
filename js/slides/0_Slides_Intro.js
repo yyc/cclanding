@@ -85,6 +85,7 @@ SLIDES.push({
 			active:true
 		});
 		o.submit_button.config.onclick = ()=> {
+			alert(o.question_box.dom.value);
 			publish("submit_form")
 		}
 	},

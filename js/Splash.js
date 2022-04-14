@@ -120,9 +120,27 @@ function SplashPeep(config){
 	self.config = config;
 
 	// Graphics!
-	var g = _makeMovieClip("splash_peep", {scale:0.3});
+	// var g = _makeMovieClip("splash_peep", {scale:0.3});
+
+	let textureArray = [];
+
+	for (let i=5; i <=31; i++)
+	{
+			let texture = PIXI.Texture.fromImage("assets/trash/Asset " + i +".png");
+			textureArray.push(texture);
+	};
+
+	let g = new PIXI.MovieClip(textureArray);
+	g.scale.x = 0.2;
+	g.scale.y = 0.2;
+	g.anchor.x = 0.5;
+	g.anchor.y = 0.5;
+
+
 	self.graphics = g;
-	if(config.blush) g.gotoAndStop(1);
+	// pick a random frame to stop on 
+	g.gotoAndStop(Math.floor(Math.random() * textureArray.length))
+
 	if(Math.random()<0.5) g.scale.x*=-1; // Flip?
 
 	// Them variables...

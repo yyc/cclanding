@@ -7,6 +7,9 @@ function TextareaBox(config){
 	self.dom = document.createElement('TEXTAREA');
 	self.dom.className = "object";
 	self.dom.classList.add("textbox");
+	if(config.required)  {
+		self.dom.required = true;
+	}
 
 	self.dom.placeholder = Words.get(config.text_id)
 
