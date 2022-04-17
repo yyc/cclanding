@@ -8,9 +8,10 @@ window.Words = {};
 Words.text = {
 	"title": "Climate Commons",
 	"subtitle": "Climate Commons is a resource bank to communicate complex sustainability concepts as interactive essays",
-	"question": "In the meantime, what sustainability concepts would you like to learn more about?",
+	"question": "As we work on more content, what sustainability concepts would you like to learn about?",
 	"submit": "Submit",
-	"placeholder": "Enter Question Here"
+	"placeholder": "Enter Question Here",
+	"thankyou": "Thank you!"
 };
 
 Words.get = function(id){

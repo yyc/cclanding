@@ -1,9 +1,3 @@
-@font-face{
-	font-family: 'FuturaHandwritten';
-	font-style: normal;
-	src: url('FuturaHandwritten.ttf') format('truetype');
-}
-
 html,body{
 	width: 100%;
 	height: 100%;
@@ -16,7 +10,7 @@ body{
 
 	background: rgb(22,49,128);
 
-	font-family: 'FuturaHandwritten';
+	font-family: 'Nunito';
 	color: #fff;
 	font-size: 20px;
 
@@ -35,7 +29,7 @@ body{
 }
 #main{
 	width: 100%;
-	height: calc(100% - 60px);
+	height: 100%;
 	position: relative;
 	overflow: hidden;
 }
@@ -43,8 +37,9 @@ body{
 	position: absolute;
 	z-index: 1000;
 	width: 100%;
-	height: 60px;
+	height: 0px;
 	background: #222;
+	display: none;
 }
 s{
 	text-decoration: line-through;
@@ -155,7 +150,10 @@ s{
 
 /******** Text Box ********/
 
-.textbox{}
+.textbox{
+	line-height: 1em;
+
+}
 .textbox > div{
 	position: absolute;
 }
@@ -163,6 +161,7 @@ s{
 .textbox b{
 	font-weight: normal;
 	text-shadow:1px 0 0 currentColor;
+
 }
 
 
@@ -200,19 +199,21 @@ textarea {
 	transition: transform 0.1s ease-out;
 
 	text-align: center;
+
 }
 .button #background{
 	position: absolute;
-	background: url(../assets/ui/button.png);
-	width:250px; height:125px;
+	background-color: #fff;
+	border-radius: 20px;
+	width:200px; height:40;
 	background-size: 100%;
-	top:-35px; left:-30px;
+	top:10px;
 	pointer-events:none;
 	cursor: default;
 }
 .button #text{
 
-	font-family: 'FuturaHandwritten';
+	font-family: 'Nunito';
 	color: #000;
 	font-size: 24px;
 
@@ -221,7 +222,7 @@ textarea {
 	text-align: center;
 
 	position: absolute;
-	top:14px; left:5px;
+	top:14px; left:10px;
 
 	cursor: default;
 
@@ -230,6 +231,9 @@ textarea {
 	position: absolute;
 	width:195px; height:55px;
 	cursor: pointer;
+
+	/* border: 1px solid white;
+	border-radius: 3px; */
 }
 .button[hover=yes]{
 	z-index: 100;

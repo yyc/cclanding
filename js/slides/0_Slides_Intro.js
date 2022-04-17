@@ -16,30 +16,9 @@ Labels should be in the en.html folder
 
 Loader.addToManifest(Loader.manifest,{
 
-	// CSS ASSETS
-	cssAsset0: "assets/ui/button.png",
-	cssAsset1: "assets/ui/button_short.png",
-	cssAsset2: "assets/ui/button_long.png",
-	cssAsset3: "assets/ui/sandbox_tabs.png",
-	cssAsset4: "assets/ui/sandbox_incdec.png",
-	cssAsset5: "assets/ui/slider_bg.png",
-	cssAsset6: "assets/ui/slider_knob.png",
-	cssAsset7: "assets/ui/sandbox_hats.png",
-	cssAsset8: "assets/ui/scratch.png",
-	cssAsset9: "assets/iterated/iterated_scoreboard.png",
-	cssAsset10: "assets/tournament/peep_characters.png",
-	cssAsset11: "assets/ui/sandbox_hats.png",
-	cssAsset12: "assets/tournament/score_small.png",
-
-	// Music!
-	bg_music: "assets/sounds/bg_music.mp3",
-
-	// IMAGE BOXES
-	image1: "assets/evolution/evolution_intro.png",
-	image2: "assets/conclusion/summary.png",
-	image3: "assets/conclusion/truce.jpg",
-
 });
+
+var lambda_endpoint = "https://j46mchgy76.execute-api.ap-southeast-1.amazonaws.com/default/climatecommons-post-question";
 
 SLIDES.push({
 
@@ -54,38 +33,53 @@ SLIDES.push({
 		// TITLE TEXT
 		self.add({
 			id:"logo", type:"ImageBox",
-			x:325, y:-50,
+			x:325, y:-60,
 			h: 300, w: 300,
 			src: "assets/CC-logo-white.png"
 		});
 		self.add({
 			id:"subtitle", type:"TextBox",
-			x:267, y:240, width:420,
-			align:"center", color:"#ddd", size:15,
+			x:152, y:210, width:650,
+			align:"center", color:"#ddd", size:25,
 			text_id:"subtitle"
 		});
 
 		self.add({
 			id:"question", type:"TextBox",
-			x:267, y: 290, width:420,
-			align:"center", color:"#ddd", size:15,
+			x:152, y: 270, width:650,
+			align:"center", color:"#ddd", size:25,
 			text_id:"question"
 		});
 		self.add({
 			id:"question_box", type:"TextareaBox",
-			x:267, y: 340, width:420, h: 80,
-			align:"center", color:"#fff", size:15,
+			x:267, y: 355, width:420, h: 80,
+			align:"center", color:"#fff", size:20,
 			text_id:"placeholder"
 		});
 
 		// Button
 		self.add({
-			id:"submit_button", type:"Button", x:382, y:430,
+			id:"submit_button", type:"Button", x:382, y:450,
 			text_id:"submit",
 			active:true
 		});
 		o.submit_button.config.onclick = ()=> {
-			alert(o.question_box.dom.value);
+			let question = o.question_box.dom.value;
+			
+			o.question_box.dom.disabled = true;
+			fetch(lambda_endpoint, {
+				method: "POST",
+				mode: "cors",
+				headers: {
+					'Content-Type': 'application/json'
+					// 'Content-Type': 'application/x-www-form-urlencoded',
+				},
+				body: JSON.stringify({"message": question})
+			}).then(res => {
+				o.submit_button.dom.disabled = true;
+				o.submit_button.setText("thankyou");
+			})
+
 			publish("submit_form")
 		}
 	},
