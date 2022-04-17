@@ -7,8 +7,8 @@ Convert a word.html to a JSON containing innerHTMLs
 window.Words = {};
 Words.text = {
 	"title": "Climate Commons",
-	"subtitle": "Climate Commons is a resource bank to communicate complex sustainability concepts as interactive essays",
-	"question": "As we work on more content, what sustainability concepts would you like to learn about?",
+	"subtitle": "We aim to communicate complex climate issues in interactive ways. <br /><br /> As we work on more content, what sustainability concepts would you like to know more about?",
+	"question": "",
 	"submit": "Submit",
 	"placeholder": "Enter Question Here",
 	"thankyou": "Thank you!"

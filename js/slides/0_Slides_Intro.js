@@ -33,23 +33,17 @@ SLIDES.push({
 		// TITLE TEXT
 		self.add({
 			id:"logo", type:"ImageBox",
-			x:325, y:-60,
-			h: 300, w: 300,
+			x:350, y:-60,
+			h: 250, w: 250,
 			src: "assets/CC-logo-white.png"
 		});
 		self.add({
 			id:"subtitle", type:"TextBox",
-			x:152, y:210, width:650,
+			x:152, y:170, width:650,
 			align:"center", color:"#ddd", size:25,
 			text_id:"subtitle"
 		});
 
-		self.add({
-			id:"question", type:"TextBox",
-			x:152, y: 270, width:650,
-			align:"center", color:"#ddd", size:25,
-			text_id:"question"
-		});
 		self.add({
 			id:"question_box", type:"TextareaBox",
 			x:267, y: 355, width:420, h: 80,
@@ -59,10 +53,18 @@ SLIDES.push({
 
 		// Button
 		self.add({
-			id:"submit_button", type:"Button", x:382, y:450,
+			id:"submit_button", type:"Button", x:382, y:440,
 			text_id:"submit",
 			active:true
 		});
+
+		self.add({
+			id:"insta", type:"ImageBox",
+			x:470, y:500,
+			h: 25, w: 25,
+			src: "assets/instagram.png"
+		});
+
 		o.submit_button.config.onclick = ()=> {
 			let question = o.question_box.dom.value;
 			

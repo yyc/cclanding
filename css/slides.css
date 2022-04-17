@@ -8,9 +8,10 @@ body{
 	margin:0;
 	overflow: hidden;
 
-	background: rgb(22,49,128);
+	background: #173181;
 
 	font-family: 'Nunito';
+	font-weight: 400;
 	color: #fff;
 	font-size: 20px;
 
@@ -151,8 +152,7 @@ s{
 /******** Text Box ********/
 
 .textbox{
-	line-height: 1em;
-
+	line-height: 1.2em;
 }
 .textbox > div{
 	position: absolute;
@@ -161,7 +161,6 @@ s{
 .textbox b{
 	font-weight: normal;
 	text-shadow:1px 0 0 currentColor;
-
 }
 
 
@@ -214,7 +213,7 @@ textarea {
 .button #text{
 
 	font-family: 'Nunito';
-	color: #000;
+	color: #173181;
 	font-size: 24px;
 
 	width: 180px;
