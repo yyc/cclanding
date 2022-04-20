@@ -47,7 +47,7 @@ SLIDES.push({
 		self.add({
 			id:"question_box", type:"TextareaBox",
 			x:267, y: 355, width:420, h: 80,
-			align:"center", color:"#fff", size:20,
+			align:"center", color:"#fff", size:17,
 			text_id:"placeholder"
 		});
 

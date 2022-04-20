@@ -167,7 +167,7 @@ s{
 }
 
 .share > a > img {
-	height: 1.2em;
+	height: 1.4em;
 	vertical-align: middle;
 	
 }
@@ -192,11 +192,12 @@ textarea {
 	border: 1px #fff solid;
 	border-radius: 5px;
 	color: #fff;
-	font-size: 20pt;
+	font-family: 'Nunito';
+	padding-top: 8px;
 }
 
 ::placeholder {
-  color: #888;
+  color: rgba(255,255,255,0.5);
 }
 
 
@@ -225,7 +226,7 @@ textarea {
 }
 .button #background{
 	position: absolute;
-	/* background-color: #fff; */
+	background-color: #fff;
 	border: solid #fff 2px;
 	border-radius: 20px;
 	width:200px; height:40;
@@ -237,7 +238,8 @@ textarea {
 .button #text{
 
 	font-family: 'Nunito';
-	color: #fff;
+	/* color: #fff; */
+	color: #173181;
 	font-size: 24px;
 
 	width: 180px;
@@ -263,11 +265,11 @@ textarea {
 	transform: scale(1.02, 1.02);
 }
 .button[hover=yes] #background{
-	background-color: #fff;
+	background-color: #173181;
 	background-position: 0px -125px !important;
 }
 .button[hover=yes] #text{
-	color: #173181;
+	color: #fff;
 }
 .button[deactivated=yes] #background{
 	background-position: 0px -250px !important;

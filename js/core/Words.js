@@ -12,7 +12,7 @@ Words.text = {
 	"submit": "Submit",
 	"placeholder": "For example:\nWhere does Singapore’s trash go?\nWhat does NET ZERO really mean?",
 	"thankyou": "Thanks for the response! You may type in this textbox to submit another question.",
-	"insta_text": "<a href='https://www.instagram.com/climatecommons/'><img src='/assets/instagram.png' /> Follow us for updates!</a>"
+	"insta_text": "<a href='https://www.instagram.com/climatecommons/'><img src='/assets/instagram.png' /> &nbsp;Follow us for updates!</a>"
 };
 
 Words.get = function(id){
