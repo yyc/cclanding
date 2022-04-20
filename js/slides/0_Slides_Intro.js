@@ -33,36 +33,36 @@ SLIDES.push({
 		// TITLE TEXT
 		self.add({
 			id:"logo", type:"ImageBox",
-			x:350, y:-60,
-			h: 250, w: 250,
+			x:380, y:-40,
+			h: 200, w: 200,
 			src: "assets/CC-logo-white.png"
 		});
 		self.add({
 			id:"subtitle", type:"TextBox",
-			x:152, y:170, width:650,
+			x:175, y:160, width:590,
 			align:"center", color:"#ddd", size:25,
 			text_id:"subtitle"
 		});
 
 		self.add({
 			id:"question_box", type:"TextareaBox",
-			x:267, y: 355, width:420, h: 80,
-			align:"center", color:"#fff", size:17,
+			x:220, y: 330, width:500, h: 90,
+			align:"center", color:"#fff",
 			text_id:"placeholder"
 		});
 
 		// Button
 		self.add({
-			id:"submit_button", type:"Button", x:382, y:440,
+			id:"submit_button", type:"Button", x:378, y:430,
 			text_id:"submit",
 			active:true
 		});
 
 		self.add({
 			id:"insta_text", type:"TextBox",
-			x:152, y:505,
+			x:152, y:515,
 			width:650,
-			align:"center", color:"#fff", size:25,
+			align:"center", color:"#fff", size:18,
 			text_id:"insta_text"
 		});
 		o.insta_text.dom.classList.add("share")
