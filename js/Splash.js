@@ -85,7 +85,7 @@ function Splash(config){
 			}
 		}
 	};
-	_connectAllWithinRadius(250);
+	_connectAllWithinRadius(200);
 
 	// Animiniminimination
 	var update = function(delta){
@@ -192,11 +192,22 @@ function SplashEdge(config){
 	var self = this;
 	self.config = config;
 
-	// Graphics!
-	var g = _makeMovieClip("connection");
+	let textureArray = [];
+	for (let i=1; i <=2; i++)
+	{
+			let texture = PIXI.Texture.fromImage("assets/splash/wavy1.png");
+			textureArray.push(texture);
+	};
+
+  let g = new PIXI.extras.MovieClip(textureArray);
+	// g = _makeMovieClip("connection");
+	g.scale.x = 1;
+	g.scale.y = 1;
+
 	g.anchor.x = 0;
 	g.anchor.y = 0.5;
-	g.height = 1;
+	g.height = 10;
+	g.width = 100;
 	self.graphics = g;
 
 	// Them variables...

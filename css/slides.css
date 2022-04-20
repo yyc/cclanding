@@ -9,6 +9,7 @@ body{
 	overflow: hidden;
 
 	background: #173181;
+	/* background: #fff; */
 
 	font-family: 'Nunito';
 	font-weight: 400;
@@ -176,6 +177,7 @@ s{
 .share > a {
 	color: #fff;
 	text-decoration: none;
+
 }
 
 
