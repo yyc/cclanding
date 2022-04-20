@@ -1,12 +1,3 @@
-Loader.addToManifest(Loader.manifest,{
-
-	// SFX
-	button1: "assets/sounds/button1.mp3",
-	button2: "assets/sounds/button2.mp3",
-	button3: "assets/sounds/button3.mp3"
-
-});
-
 function Button(config){
 
 	var self = this;

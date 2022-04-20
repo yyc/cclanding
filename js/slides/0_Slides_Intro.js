@@ -59,26 +59,32 @@ SLIDES.push({
 		});
 
 		self.add({
-			id:"insta", type:"ImageBox",
-			x:470, y:500,
-			h: 25, w: 25,
-			src: "assets/instagram.png"
+			id:"insta_text", type:"TextBox",
+			x:152, y:505,
+			width:650,
+			align:"center", color:"#fff", size:25,
+			text_id:"insta_text"
 		});
+		o.insta_text.dom.classList.add("share")
+
 
 		o.submit_button.config.onclick = ()=> {
 			let question = o.question_box.dom.value;
-			
+			if(!question)  {
+				 // do nothing if no question was entered
+				 console.log("early returning")
+				return;
+			}
 			o.question_box.dom.disabled = true;
 			fetch(lambda_endpoint, {
 				method: "POST",
 				mode: "cors",
 				headers: {
 					'Content-Type': 'application/json'
-					// 'Content-Type': 'application/x-www-form-urlencoded',
 				},
 				body: JSON.stringify({"message": question})
 			}).then(res => {
-				o.submit_button.dom.disabled = true;
+				o.question_box.dom.disabled = false;
 				o.submit_button.setText("thankyou");
 			})
 

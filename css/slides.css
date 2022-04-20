@@ -153,6 +153,8 @@ s{
 
 .textbox{
 	line-height: 1.2em;
+	vertical-align: middle;
+
 }
 .textbox > div{
 	position: absolute;
@@ -161,6 +163,19 @@ s{
 .textbox b{
 	font-weight: normal;
 	text-shadow:1px 0 0 currentColor;
+}
+
+.share > a > img {
+	height: 1.2em;
+	vertical-align: middle;
+	
+}
+.share {
+	line-height: 1em !important;
+}
+.share > a {
+	color: #fff;
+	text-decoration: none;
 }
 
 
@@ -172,10 +187,16 @@ s{
 
 textarea {
 	background-color: transparent;
-	border: 2px #fff solid;
+	border: 1px #fff solid;
 	border-radius: 5px;
-	color: #fff
+	color: #fff;
+	font-size: 20pt;
 }
+
+::placeholder {
+  color: #888;
+}
+
 
 
 /********* Button ********/
@@ -202,7 +223,8 @@ textarea {
 }
 .button #background{
 	position: absolute;
-	background-color: #fff;
+	/* background-color: #fff; */
+	border: solid #fff 2px;
 	border-radius: 20px;
 	width:200px; height:40;
 	background-size: 100%;
@@ -213,7 +235,7 @@ textarea {
 .button #text{
 
 	font-family: 'Nunito';
-	color: #173181;
+	color: #fff;
 	font-size: 24px;
 
 	width: 180px;
@@ -239,7 +261,11 @@ textarea {
 	transform: scale(1.02, 1.02);
 }
 .button[hover=yes] #background{
+	background-color: #fff;
 	background-position: 0px -125px !important;
+}
+.button[hover=yes] #text{
+	color: #173181;
 }
 .button[deactivated=yes] #background{
 	background-position: 0px -250px !important;

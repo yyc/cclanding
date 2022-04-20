@@ -13,6 +13,10 @@ function TextareaBox(config){
 
 	self.dom.placeholder = Words.get(config.text_id)
 
+	if(config.onchange) {
+		self.dom.onchange = config.onchange;
+	}
+
 	console.log("textarea")
 
 	// Customize
@@ -22,5 +26,5 @@ function TextareaBox(config){
 	self.add = function(){ _add(self); };
 	self.remove = function(){ _remove(self); };
 
+
 }
-console.log("is this even being created")
