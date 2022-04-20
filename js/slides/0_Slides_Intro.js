@@ -46,7 +46,7 @@ SLIDES.push({
 
 		self.add({
 			id:"question_box", type:"TextareaBox",
-			x:220, y: 330, width:500, h: 90,
+			x:220, y: 329, width:500, h: 90,
 			align:"center", color:"#fff",
 			text_id:"placeholder"
 		});
@@ -60,7 +60,7 @@ SLIDES.push({
 
 		self.add({
 			id:"insta_text", type:"TextBox",
-			x:152, y:515,
+			x:152, y:510,
 			width:650,
 			align:"center", color:"#fff", size:18,
 			text_id:"insta_text"
