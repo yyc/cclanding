@@ -196,10 +196,11 @@ textarea {
 	border-radius: 5px;
 	color: #fff;
 	font-family: 'Nunito';
-	font-size: 18px;
+	font-size: 100%;
 	padding-top: 12px;
 	padding-left: 12px;
 	padding-right: 12px;
+	text-align: center;
 }
 
 ::placeholder {
