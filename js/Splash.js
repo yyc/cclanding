@@ -2,6 +2,7 @@ Loader.addToManifest(Loader.manifestPreload,{
 	splash_peep: "assets/splash/splash_peep.json",
 	connection: "assets/splash/connection.json",
 });
+var edges = [];
 
 function Splash(config){
 
@@ -41,7 +42,6 @@ function Splash(config){
 	};
 
 	// EDGES
-	var edges = [];
 	self.addEdge = function(from, to){
 		var edge = new SplashEdge({ from:from, to:to });
 		edges.push(edge);
@@ -192,15 +192,15 @@ function SplashEdge(config){
 	var self = this;
 	self.config = config;
 
-	let textureArray = [];
-	for (let i=1; i <=2; i++)
-	{
-			let texture = PIXI.Texture.fromImage("assets/splash/Asset 44.png");
-			textureArray.push(texture);
-	};
+	let textureArray = [PIXI.Texture.fromImage("assets/splash/Asset 36.png")];
+	// for (let i=43; i <=46; i++)
+	// {
+	// 		let texture = PIXI.Texture.fromImage("assets/splash/Asset "+i+".png");
+	// 		textureArray.push(texture);
+	// };
 
   let g = new PIXI.extras.MovieClip(textureArray);
-	// g = _makeMovieClip("connection");
+	g.gotoAndStop(Math.floor(Math.random() * textureArray.length));
 	g.scale.x = 1;
 	g.scale.y = 1;
 
