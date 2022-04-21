@@ -33,34 +33,34 @@ SLIDES.push({
 		// TITLE TEXT
 		self.add({
 			id:"logo", type:"ImageBox",
-			x:380, y:-40,
-			h: 200, w: 200,
+			x:355, y:-140,
+			h: 250, w: 250,
 			src: "assets/CC-logo-white.png"
 		});
 		self.add({
 			id:"subtitle", type:"TextBox",
-			x:175, y:160, width:590,
-			align:"center", color:"#ddd", size:25,
+			x:95, y:110, width:750,
+			align:"center", color:"#ddd", size:30,
 			text_id:"subtitle"
 		});
 
 		self.add({
 			id:"question_box", type:"TextareaBox",
-			x:220, y: 329, width:500, h: 90,
+			x:255, y: 329, width:450, h: 108,
 			align:"center", color:"#fff",
 			text_id:"placeholder"
 		});
 
 		// Button
 		self.add({
-			id:"submit_button", type:"Button", x:378, y:430,
+			id:"submit_button", type:"Button", x:378, y:472,
 			text_id:"submit",
 			active:true
 		});
 
 		self.add({
 			id:"insta_text", type:"TextBox",
-			x:152, y:510,
+			x:152, y:574,
 			width:650,
 			align:"center", color:"#fff", size:18,
 			text_id:"insta_text"

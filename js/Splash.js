@@ -59,7 +59,7 @@ function Splash(config){
 			self.addPeep(x,y);
 		}
 	};
-	_createRing(400, 20);
+	// _createRing(400, 20);
 	_createRing(520, 25);
 	_createRing(640, 30);
 	_createRing(760, 35);
@@ -195,7 +195,7 @@ function SplashEdge(config){
 	let textureArray = [];
 	for (let i=1; i <=2; i++)
 	{
-			let texture = PIXI.Texture.fromImage("assets/splash/wavy1.png");
+			let texture = PIXI.Texture.fromImage("assets/splash/Asset 44.png");
 			textureArray.push(texture);
 	};
 

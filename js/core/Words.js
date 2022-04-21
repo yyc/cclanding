@@ -10,7 +10,7 @@ Words.text = {
 	"subtitle": "With Climate Commons, we aim to communicate complex climate issues in interactive ways. <br /> <br /> We&apos;re launching soon! In the meantime, we&apos;re curious about the topics you&apos;d vibe with :)",
 	"question": "",
 	"submit": "Submit",
-	"placeholder": "For example:\nWhere does Singapore’s trash go?\nWhat does NET ZERO really mean?",
+	"placeholder": "For example: \nWhere does Singapore’s trash go? \nWhat does NET ZERO really mean?",
 	"thankyou": "Thanks for the response! You may type in this textbox to submit another question.",
 	"insta_text": "<a href='https://www.instagram.com/climatecommons/'><img src='/assets/instagram.png' /> &nbsp;Follow us for updates!</a>"
 };
