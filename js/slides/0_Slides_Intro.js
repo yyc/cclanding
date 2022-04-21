@@ -76,6 +76,7 @@ SLIDES.push({
 				return;
 			}
 			o.question_box.dom.disabled = true;
+			o.submit_button.config.active = false;
 			fetch(lambda_endpoint, {
 				method: "POST",
 				mode: "cors",
@@ -85,7 +86,11 @@ SLIDES.push({
 				body: JSON.stringify({"message": question})
 			}).then(res => {
 				o.question_box.dom.disabled = false;
-				o.submit_button.setText("thankyou");
+				o.question_box.setText("thankyou");
+			}).catch(err => {
+				alert("Something went wrong when submitting your reponse! Please try again.")
+				o.question_box.dom.disabled = false;
+				o.submit_button.config.active = true;
 			})
 
 			publish("submit_form")

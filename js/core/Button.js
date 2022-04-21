@@ -60,14 +60,6 @@ function Button(config){
 
 		if(self.active){
 
-			// Sound!
-			if(config.sound){
-				Loader.sounds[config.sound].play();
-			}else{
-				var num = Math.ceil(Math.random()*3);
-				Loader.sounds["button"+num].play();
-			}
-
 			// Actual Logic
 			if(config.onclick) config.onclick();
 			if(config.message) publish(config.message);
