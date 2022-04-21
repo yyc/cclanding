@@ -22,6 +22,11 @@ function TextareaBox(config){
 	// Customize
 	_configText(config, self.dom);
 
+	self.setTextID = function(id){
+		self.dom.placeholder = Words.get(id)
+	};
+
+
 	// Add & Remove
 	self.add = function(){ _add(self); };
 	self.remove = function(){ _remove(self); };

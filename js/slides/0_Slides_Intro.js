@@ -18,7 +18,7 @@ Loader.addToManifest(Loader.manifest,{
 
 });
 
-var lambda_endpoint = "https://j46mchgy76.execute-api.ap-southeast-1.amazonaws.com/default/climatecommons-post-question";
+var lambda_endpoint = "https://j46mchgy76.execute-api.ap-southeast-1.amazonaws.com/prod/climatecommons-post-question";
 
 SLIDES.push({
 
@@ -86,8 +86,10 @@ SLIDES.push({
 				body: JSON.stringify({"message": question})
 			}).then(res => {
 				o.question_box.dom.disabled = false;
-				o.question_box.setText("thankyou");
+				o.question_box.setTextID("thankyou");
+				o.question_box.dom.value = "";
 			}).catch(err => {
+				console.error(err)
 				alert("Something went wrong when submitting your reponse! Please try again.")
 				o.question_box.dom.disabled = false;
 				o.submit_button.config.active = true;
